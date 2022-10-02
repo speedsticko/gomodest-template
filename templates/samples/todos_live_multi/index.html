@@ -1,0 +1,24 @@
+{{define "content"}}
+    <a href="/samples"> < Back</a>
+    <div class="columns is-mobile is-centered">
+        <div data-controller="glv"
+             data-glv-change-request-id-value="list"
+             data-glv-action-value="replace"
+             data-glv-target-value="todos"
+             data-glv-template-value="todos"
+             data-glv-params-value='{"x": 1}'
+             class="column is-half-desktop">
+            <div class="mb-2">
+                <a type="button" class="button is-primary" href="/samples/live/multi/todos/new">
+                <span class="icon">
+                  <i class="fas fa-plus"></i>
+                </span>
+                    <span>New</span>
+                </a>
+            </div>
+            <div id="todos">
+                {{ template "todos" .}}
+            </div>
+        </div>
+    </div>
+{{end}}
